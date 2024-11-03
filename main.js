@@ -20,6 +20,9 @@ async function retrieveUnresolvedTickets(userId)
     } catch (error) {
         console.error('Error:', error.message); //catch error
     }
+    finally {
+        console.log('Closing database connection'); //cleaning up after fetch
+    }
 }
 
 retrieveUnresolvedTickets(); //initialize function
